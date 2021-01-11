@@ -20,10 +20,14 @@ function countdown(){
     const segundos = Math.floor(segundosTotal) % 60;
 
     daysEl.innerHTML = dias;
-    hoursEl.innerHTML = horas;
-    minsEl.innerHTML = minutos;
-    secsEl.innerHTML = segundos;
+    hoursEl.innerHTML = formatTime(horas);
+    minsEl.innerHTML = formatTime(minutos);
+    secsEl.innerHTML = formatTime(segundos);
 
+};
+
+function formatTime(time){
+    return time <10 ? (`0${time}`) : time;
 };
 
 //Chamado da função
